@@ -18,15 +18,15 @@ export interface SiteDataProps {
 const siteData: SiteDataProps = {
 	name: "MONTES & VEGAS",
 	// Your website's title and description (meta fields)
-	title: "Horizon - a beautiful photography website template made with Astro and Tailwind CSS",
+	title: "Montes y Vegas - Un hermoso lugar donde comienza todo",
 	description:
-		"Get your next website up and running quickly with our beautiful website theme designed using Astro and Tailwind CSS. Perfect for freelancers, developers, startups, and personal use.",
+		"Montes y Vegas es un hermoso lugar donde comienza todo. Un lugar para celebrar tu amor, rodeado de naturaleza y belleza.",
 	useViewTransitions: true,
 	// Your information!
 	author: {
-		name: "Cosmic Themes",
-		email: "creator@cosmicthemes.com",
-		twitter: "Cosmic_Themes",
+		name: "Yeffrey Espinoza",
+		email: "yeffrey4008@gmail.com",
+		twitter: "yeffreydev",
 	},
 
 	// default image for meta tags if the page doesn't have an image already
