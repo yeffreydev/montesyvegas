@@ -1,0 +1,86 @@
+---
+/**
+ * * Hero with background image
+ * You'll want a mobile image, and a desktop image for this.
+ */
+
+import { Image } from "astro:assets";
+
+// components
+import Button from "@components/Button/Button.astro";
+
+// images
+import heroImage from "@images/hero-bg-min.jpg";
+import heroImageMobile from "@images/hero-bg-min.jpg";
+---
+
+<section id="hero" class="relative z-10 flex min-h-[100lvh] w-full">
+	<!-- background image -->
+	<div class="absolute -z-10 h-full min-h-full w-full overflow-hidden">
+		<div class="absolute inset-0 bg-black/10"></div>
+
+		<Image
+			src={heroImage}
+			class="hidden h-auto min-h-full w-full object-cover object-bottom sm:block"
+			alt="wedding"
+			aria-hidden="true"
+			loading="eager"
+			height={1400}
+		/>
+		<Image
+			src={heroImageMobile}
+			class="h-auto min-h-full w-full object-cover sm:hidden"
+			alt="wedding"
+			aria-hidden="true"
+			loading="eager"
+			width={1200}
+		/>
+	</div>
+
+	<!-- hero items -->
+	<div class="site-container relative w-full gap-10 py-44 text-center md:py-52 md:text-left">
+		<!-- Hero text -->
+		<div class="text-base-50 my-auto mr-auto max-w-[800px] flex-col">
+			<h1
+				class="font-heading-1 text-gold text-4xl font-semibold text-pretty drop-shadow-[0_2px_2px_rgba(0,0,0,0.4)] md:text-7xl md:leading-tight"
+			>
+				MONTES Y VEGAS.
+			</h1>
+			<p
+				class="mt-8 text-lg tracking-widest text-pretty drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:max-w-[550px] md:text-2xl"
+			>
+				En nuestra asociación, el esfuerzo de todos hace la diferencia: Ahorro y 
+				crédito para crecer juntos y construir un futuro más próspero
+			</p>
+			<div class="mt-10 flex flex-wrap justify-center gap-4 md:justify-start">
+				<Button
+					variant="ghost"
+					arrow="right"
+					href="/#contact"
+					class="text-xl bg-[#77ff44] text-black rounded-full px-5 drop-shadow-[0_1px_1px_rgba(0,0,0,0.2)] md:text-3xl"
+				>
+					CONTACTO
+				</Button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.text-gold {
+   letter-spacing: 5px;
+   font-weight: bold;
+   background-image: linear-gradient(
+	to right,
+	#e8b76d 0,
+       	#e8b76d 22%, 
+	#fff3b5 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#cb9b51 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
+}
+</style>
